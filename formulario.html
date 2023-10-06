@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="LOGO s fundo.png" type="image/x-icon">
+    <title>Cadastro de Clientes PETSHOP</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, #FF969E, #FFEBC6);
+        }
+
+        img{
+            width: 400px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-50px);
+            }
+        }
+
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(62, 59, 59, 0.58);
+            padding: 15px;
+            border-radius: 15px;
+            color: #FFEBC6;
+        }
+        
+        fieldset {
+            border: 2px solid #FFEBC6;
+        }
+
+        legend {
+            border: 2px solid #FFEBC6;
+            padding: 5px;
+            text-align: center;
+            background-image: linear-gradient(to right, #FFEBC6, #FF969E);
+            border-radius: 15px;
+            color: rgb(29, 28, 28);
+        }
+
+        .inputBox {
+            position: relative;
+        }
+
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid #FFEBC6;
+            outline: none;
+            color: #FF969E;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: #FF969E;
+        }
+
+        #data {
+            border: none;
+            border-radius: 10px;
+            padding: 3px;
+            outline: none;
+            font-size: 15px;
+            background-image: linear-gradient(to right, #FFEBC6, #FF969E);
+            color: rgb(29, 28, 28);
+        }
+
+        #submit {
+            background-image: linear-gradient(to right, #FFEBC6, #FF969E);
+            padding: 5px;
+            width: 100%;
+            border: none;
+            padding: 10px;
+            color: rgb(29, 28, 28);
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+        #submit:hover {
+            background-image: linear-gradient(to right, #ffebc69a, #ff969fc8);
+        }
+    </style>
+</head>
+<body>
+    <img src="LOGO s fundo.png" alt="Logo PETSHOP">
+    <div class="box">
+        <fieldset>
+            <legend><b>Cadasto de clientes e pets</b></legend>
+            <br><br>
+            <div class="inputBox">
+                <input type="text" name="nome" id="nome" class="inputUser" required>
+                <label for="nome" class="labelInput">Nome do Tutor</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                <label for="telefone" class="labelInput">Telefone</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="text" name="nome" id="nome" class="inputUser" required>
+                <label for="nome" class="labelInput">Nome do Pet</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="raca" name="raca" id="raca" class="inputUser" required>
+                <label for="raca" class="labelInput">Raça</label>
+            </div>
+            <br>
+            <p>Gênero</p>
+            <input type="radio" id="femea" name="genero" value="femea" required>
+            <label for="femea">Fêmea</label>
+            <input type="radio" id="macho" name="genero" value="macho" required>
+            <label for="macho">Macho</label>
+            <p>Castrado(a)</p>
+            <input type="radio" id="sim" name="sim" value="sim" required>
+            <label for="sim">Sim</label>
+            <input type="radio" id="nao" name="nao" value="nao" required>
+            <label for="nao">Não</label> 
+            <br><br>
+            <label for="data"><b>Data de Nascimento do Pet:</b></label>
+            <input type="date" name="data" id="data" required>
+            <br><br>
+            <div class="inputBox">
+                <input type="text" name="alergia" id="alergia" class="inputUser" required>
+                <label for="alergia" class="labelInput">Alguma Alergia? Se sim, quais?</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="text" name="insta" id="insta" class="inputUser" required>
+                <label for="insta" class="labelInput">Instagram para as fotos</label>
+            </div>
+            <br><br>
+            <input type="submit" name="submit" id="submit">
+        </fieldset>
+    </div>
+</body>
+</html>
